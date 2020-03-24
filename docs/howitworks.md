@@ -32,6 +32,8 @@ All of Linter's bundled `LintRules` are Blueprint child classes that parent from
 
 ### PassesRule_Internal_Implementation
 
+ fuck
+
 The core of implementing your own `LintRule` is to implement the `PassesRule_Internal_Implementation` function. This function can be implemented in either C++ or Blueprint as this is a `BlueprintNativeEvent`. 
 
 This should be where the business logic of your `LintRule` operates. To report a rule violation, push a new `FLintRuleViolation` to the `OutRuleViolations` array and return false. You should always return false if **any** rule is violated and you should always return true if **no** rules were violated. A `FLintRuleViolation` is simply a struct that has a reference to the asset that is violating the rule, a reference to the rule that is being violated, and potentially any additional optional recommended text to display to the user reading the Lint Report.
